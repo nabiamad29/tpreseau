@@ -3,14 +3,14 @@
 
 int main(int argc , char **argv) {
     char buffer[128]={0};
-    char receive[128]={0};
+    char receive[1024]={0};
     char server[128]={0};
     char rrq[128]={0};
     char ACK[128]={0};
     struct addrinfo hints;
     struct addrinfo *res;
     struct addrinfo *otherhints= calloc(1,sizeof(struct addrinfo));
-    struct sockaddr *socketrecv;
+    struct addrinfo socketrecv;
     int soc,socketrecvSize;
     char* Namefile=argv[1];
     char* serv=argv[2];
@@ -45,11 +45,14 @@ int main(int argc , char **argv) {
     }
     printf("socket %d\n\r",soc);
     sprintf(rrq, " \1%s netascii",Namefile);
+    int sizeBufferToSend=strlen(rrq);
     rrq[0]=0;
     rrq[strlen(Namefile)+2]=0;
 
-    sendto(soc,buffer,128,res->ai_flags,res->ai_addr,res->ai_addrlen);
-    recvfrom(soc,receive,128,res->ai_flags,&socketrecv,&socketrecvSize);
+    int status = sendto(soc,buffer,sizeBufferToSend,res->ai_flags,res->ai_addr,res->ai_addrlen);
+    printf("status sendto = %d\n",status);
+    status=recvfrom(soc,receive,1024,NULL,socketrecv.ai_addr,&(socketrecv.ai_addrlen));
+    printf("status recvfrom = %d\n",status);
 
 
     return 0;
