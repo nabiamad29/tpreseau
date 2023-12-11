@@ -28,19 +28,19 @@ int main(int argc , char **argv) {
     hints.ai_family=AF_UNSPEC;
     hints.ai_protocol=IPPROTO_UDP;
 
-    printf("le nom du fichier est %s\n\r",Namefile);
-    printf("le nom du serveur est %s \n\r",serv);
-    printf("le nom du port est %s\n\r",port);
+    printf("The folder's name is %s\n\r",Namefile);
+    printf("The server's name is %s \n\r",serv);
+    printf("The port's name is %s\n\r",port);
 
     getaddrinfo(serv, port, &hints, &res);
     getnameinfo(res->ai_addr,res->ai_addrlen,buffer,128,server,128,NI_NUMERICHOST | NI_NUMERICSERV);
 
-    printf("serveur :%s:%s\n",buffer,server);
+    printf("server :%s:%s\n",buffer,server);
     
     soc=socket(res->ai_family,res->ai_socktype,res->ai_protocol);
     if(soc==-1)
     {
-        perror("erreur");
+        perror("Socket error");
         exit(EXIT_FAILURE);
     }
     printf("socket %d\n\r",soc);
