@@ -10,7 +10,7 @@ int main(int argc , char **argv) {
     struct addrinfo hints;
     struct addrinfo *res;
     struct addrinfo *otherhints= calloc(1,sizeof(struct addrinfo));
-    struct addrinfo socketrecv;
+    struct sockaddr socketrecv;
     int soc,socketrecvSize;
     char* Namefile=argv[1];
     char* serv=argv[2];
@@ -51,7 +51,7 @@ int main(int argc , char **argv) {
 
     int status = sendto(soc,buffer,sizeBufferToSend,res->ai_flags,res->ai_addr,res->ai_addrlen);
     printf("status sendto = %d\n",status);
-    status=recvfrom(soc,receive,1024,NULL,socketrecv.ai_addr,&(socketrecv.ai_addrlen));
+    status=recvfrom(soc,receive,1024,0,&socketrecv,&socketrecvSize);
     printf("status recvfrom = %d\n",status);
 
 
