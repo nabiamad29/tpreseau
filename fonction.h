@@ -7,6 +7,8 @@
 #include <stdlib.h>
 #include <netdb.h>
 #include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 #ifndef TPRESV2_FONCTION_H
 #define TPRESV2_FONCTION_H
@@ -15,3 +17,5 @@
 
 #endif //TPRESV2_FONCTION_H
 
+void gettftp(int argc , char **argv);
+void puttftp(void);
