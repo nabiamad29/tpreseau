@@ -18,4 +18,4 @@
 #endif //TPRESV2_FONCTION_H
 
 void gettftp(int argc , char **argv);
-void puttftp(void);
+void puttftp(int argc , char **argv);
