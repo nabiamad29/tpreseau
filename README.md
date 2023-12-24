@@ -23,6 +23,7 @@ le dossier github contenant le code. Une fois ceci fait,il faut compiler et test
 ## Utilisation
 Pour pouvoir utiliser le projet ,il faut le compiler puis l'exécuter et saisir un ou plusieurs fichier sur la fenetre Terminal afin de voir si le fichier a été recu .
 Exemple avec la réception d'un fichier:
+
 ![Capture d'écran 2023-12-24 152826](https://github.com/nabiamad29/tpreseau/assets/153213800/1d5254aa-8cf4-4cbe-8b97-cff8c77db462)
 
 
