@@ -35,7 +35,7 @@ Pour pouvoir contribuer au projet,il vous suffira juste de prendre le dossier co
 
 
 ## Ressenti_du_projet
-Ce projet a été difficile à appréhender au début car cela demandait beaucoup de réflexions et de recherche vis à vis du code à écrire puis ca allait naturellement mieux au fur et à mesure que j'avancais sur le projet.
+Ce projet a été plus simple à appréhender que le premier projet qui était de créer un terminal bash mais qui reste un projet complexe car on avait beaucoup plus d'éléments que l'on connaissait tels que les utilisations d'un socket. De plus,ce projet demandait des recherches vis a vis de certains éléments tels que la trame RRQ et WRQ afin de pouvoir les écrire dans le programme.
 
 ## Licence
 Ce projet est sous licence Académique JetBrains
