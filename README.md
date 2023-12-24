@@ -18,11 +18,10 @@ Ce projet a pour but de recréer un client TFTP a partir d'un logiciel de progra
 ## installation
 
 Pour installer le projet ,il faut utiliser un logiciel de programmation et télécharger
-le dossier github contenant le code. Une fois ceci fait,il faut compiler et tester le code avec n'importe quel commande linux
+le dossier github contenant le code. Une fois ceci fait,il faut compiler et tester le code en rentrant n'importe quel fichier
 
 ## Utilisation
-Pour pouvoir utiliser le projet ,il faut le compiler puis l'exécuter et saisir une commande sur la fenetre Run.
-Enfin,on tape n'importe quelle commande Linux pour tester le terminal
+Pour pouvoir utiliser le projet ,il faut le compiler puis l'exécuter et saisir un ou plusieurs fichier sur la fenetre Terminal.
 
 
 
